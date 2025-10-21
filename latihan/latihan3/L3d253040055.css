@@ -1,0 +1,50 @@
+body { 
+      background-image: url(img/background.png);
+      background-repeat: repeat-x;
+      background-attachment: fixed;
+      font-family: Georgia; 
+}
+
+h1 {
+    font-size: 60px; 
+    color: darkblue;
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+
+h3 {
+    text-align: center;
+}
+
+h3 a {
+    color: red;
+}
+
+h3 a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+h4 {
+    text-align: center;
+    font-style: italic;
+}
+
+p { 
+   text-align: right;}
+
+p a:hover {
+    color: white;
+    background-color: blue;
+}
+
+p a{
+    text-decoration: none;
+}
+
+#paragraf1 { color: orange;
+             text-align: center;
+}
+#paragraf2 { text-align: right;
+             line-height: 1.5;}
+
