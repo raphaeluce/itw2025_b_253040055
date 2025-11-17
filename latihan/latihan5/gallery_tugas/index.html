@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website dengan Animasi Lightbox</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Rubik's Cube</h1>
+
+    <div class="container">
+
+        <ul class="gallery">
+
+            <li>
+                <a href="#gambar-1">
+                <img src="img/thumbs/rubik2.jpg" alt="2">
+                <span>2x2</span>
+                </a>
+
+                <div class="overlay" id="gambar-1">
+                    <a href="#" class="close">close</a>
+                    <a href="#gambar-3" class="prev">prev</a>
+                    <img src="img/full/rubik2-full.png" alt="2">
+                    <a href="#gambar-2" class="next">next</a>
+                </div>
+
+            </li>
+
+            <li>
+                <a href="#gambar-2">
+                <img src="img/thumbs/rubik3.jpg" alt="3">
+                <span>3x3</span>
+                </a>
+
+                <div class="overlay" id="gambar-2">
+                    <a href="#" class="close">close</a>
+                    <a href="#gambar-1" class="prev">prev</a>
+                    <img src="img/full/rubik3-full.png" alt="3">
+                    <a href="#gambar-3" class="next">next</a>
+                </div>
+
+            </li>
+
+            <li>
+                <a href="#gambar-3">
+                <img src="img/thumbs/rubik4.jpg" alt="4">
+                <span>4x4</span>
+                </a>
+
+                <div class="overlay" id="gambar-3">
+                    <a href="#" class="close">close</a>
+                    <a href="#gambar-2" class="prev">prev</a>
+                    <img src="img/full/rubik4-full.png" alt="4">
+                    <a href="#gambar-1" class="next">next</a>
+                </div>
+
+            </li>
+
+            <div class="clear"></div>
+        </ul>
+
+    </div>
+
+</body>
+</html>

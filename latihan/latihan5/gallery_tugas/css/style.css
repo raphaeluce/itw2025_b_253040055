@@ -1,0 +1,172 @@
+/* font */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.woff) format('woff');
+}
+
+/* style utama */
+body {
+    background-image: url(../img/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font: 18px/36px 'Poppins', 'arial narrow', arial, sans-serif;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    /* text-shadow: 1px 1px 1px whitesmoke; */
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 0px 10px rgba( 0, 0, 0, .5);
+}
+
+.container {
+    width: 555px;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 3px 3px rgba( 0, 0, 0, .5);
+    border-radius: 8px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    /* overflow: hidden; */
+    float: left;
+    margin-left: 25px;
+    margin-right: 40px;
+    position: relative;
+}
+
+.gallery li,
+.gallery li img,
+.gallery li span {
+    border-radius: 10%;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    /* background-color: rgba(200, 200, 200, .5); */
+    border-radius: 10%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: black;
+    text-shadow: 1px 1px 1px whitesmoke;
+    transition: .3s;
+    opacity: 0;
+}
+
+.gallery li img {
+    transition: .3s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    font-size: 30px;
+    color: black;
+}
+
+.gallery li a:hover img {
+    transform: scale(1.2);
+    filter: blur(2px);
+}
+
+.clear {
+    clear: both;
+}
+
+/* overlay */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba( 0, 0, 0, 0);
+    z-index: 9999;
+    transition: .8s;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba( 0, 0, 0, .6);
+}
+
+.overlay img {
+    width: 600px;
+    height: 800px;
+    max-height: 100%;
+    transform: scale(.7);
+    box-shadow: 2px 2px 7px rgba( 0, 0, 0, .9);
+}
+
+.overlay:target img {
+    animation: fade 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -30px;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    line-height: 15px;
+    padding: 5px;
+}
+
+.overlay:target .close {
+    animation: fade 1s
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fade 1s;
+}
+
+/* navigasi */
+.next, .prev {
+    width: 57px;
+    height: 93px;
+    background-image: url(https://placehold.co/57x93?text=Next);
+    position: absolute;
+    text-indent: -9999px;
+    top: 45%;
+}
+
+.prev {
+    background-image: url(https://placehold.co/57x93?text=Prev);
+    margin-left: -50px;
+}
+
+/* animasi */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
